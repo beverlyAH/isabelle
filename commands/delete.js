@@ -29,7 +29,11 @@ module.exports = {
   description: 'delete messages',
   execute(msg, args) {
     if(msg.member.roles.has(ADMIN_ROLE_ID)) {
+      msg.channel.startTyping(msg.channel)
       deleteMessages(msg)
+      setTimeout(() => {
+        msg.channel.stopTyping(msg.channel)
+      }, 3000)
     } else {
       msg.channel.send('Sorry, that command is for admins only!')
     }
