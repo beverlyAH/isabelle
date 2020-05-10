@@ -17,6 +17,21 @@ const dodoIsValid = (dodo) => {
   }
 }
 
+const entryFeeIsValid = (entryFeeStr) => {
+  var entryFee = entryFeeStr.replace(/,/g, "")
+
+if (entryFee.length === 3) {
+  if(parseInt(entryFee[0] + entryFee[1]) > 10) {
+    return false
+  }
+} else if (entryFee.length === 5) {
+  if(parseInt(entryFee) > 10000) {
+    return false
+  }
+}
+return true
+}
+
 module.exports = (args) => {
   if( args[1] === undefined || args[2] === undefined
     || args[3] === undefined || args[4] === undefined
@@ -24,7 +39,7 @@ module.exports = (args) => {
     return false
   }
   
-  if(priceIsValid(args[1]) && dodoIsValid(args[2]) && args[3] && args[4]) {
+  if(priceIsValid(args[1]) && dodoIsValid(args[2]) && args[3] && args[4] && entryFeeIsValid(args[5])) {
     return true
   }
   return false
