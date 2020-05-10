@@ -1,4 +1,4 @@
-module.exports = (msg) => {
+module.exports = (msg, args) => {
   msg.channel.send({
     embed: {
     color: 16697377,
@@ -36,7 +36,9 @@ module.exports = (msg) => {
       },
       {
         name: '**Entry Fee**',
-        value: 'Please put **none** if it\'s free entry! Remember the max fee is **10K bells**.'
+        value: 'Must be in one of two formats: a number, or number plus K. For example: ' +
+        '10k, 10000, and 10,000 are all valid. Please put **none** if it\'s free entry! The maximum entry fee is **10K bells**. ' +
+        'Please remember, charging more than the maximum is a **bannable offense**.'
       }
     ],
     timestamp: new Date

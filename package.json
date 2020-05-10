@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bot": "nodemon index.js",
+    "bot": "node index.js",
+    "dev": "nodemon index.js",
     "start": "pm2 start index.js",
     "stop": "pm2 stop index.js",
     "list": "pm2 list",
