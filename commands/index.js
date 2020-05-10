@@ -1,3 +1,4 @@
 module.exports = {
-  Turnip: require('./turnip.js')
+  Turnip: require('./turnip.js'),
+  Delete: require('./delete.js')
 }
