@@ -1,8 +1,13 @@
+const ISABELLE_ICON = process.env.ISABELLE_ICON
+
 module.exports = (msg, args) => {
   msg.channel.send({
     embed: {
     color: 16697377,
     title: 'Need help making a turnip listing?',
+    thumbnail: {
+      "url": `${ISABELLE_ICON}`
+    },
     description: 'Here\'s what you need to know:',
     fields: [
       {
@@ -20,7 +25,7 @@ module.exports = (msg, args) => {
       },
       {
         name: '**Note**',
-        value: 'You can substitute DM if you don\'t want to include your Dodo Code, IE:\n/turnip sell 450 DM 1 hour'
+        value: 'You can substitute DM if you don\'t want to include your Dodo Code, for example: /turnip sell 450 DM 1 hour'
       },
       {
         name: '**Dodo Codes**',
