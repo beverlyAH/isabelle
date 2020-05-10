@@ -1,0 +1,28 @@
+{
+  "name": "isabelle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bot": "nodemon index.js",
+    "start": "pm2 start index.js",
+    "stop": "pm2 stop index.js",
+    "list": "pm2 list",
+    "test": "jest test.js"
+  },
+  "author": "beverly hernandez (co-credit anne teensma)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^25.5.4",
+    "moment": "^2.25.1",
+    "nodemon": "^2.0.2",
+    "pm2": "^4.4.0"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
