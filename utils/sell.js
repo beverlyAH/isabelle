@@ -1,7 +1,7 @@
 const validate = require('./validate.js')
 const error = require('./error.js')
 const greeting = require('./greeting.js')
-const LISTING_CHANNEL = process.env.LISTING_CHANNEL
+const SELLING_CHANNEL = process.env.SELLING_CHANNEL
 const NOOKLING_ICON = process.env.NOOKLING_ICON
 
 module.exports = (msg, args) => {
@@ -16,7 +16,7 @@ module.exports = (msg, args) => {
     code = args[2].toUpperCase()
   }
   
-  msg.client.channels.get(LISTING_CHANNEL).send({
+  msg.client.channels.get(SELLING_CHANNEL).send({
     embed: {
       color: 16697377,
       title: greeting(),
