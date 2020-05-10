@@ -21,8 +21,8 @@ module.exports = (msg, args) => {
       thumbnail: {
         "url": `${DAISY_ICON}`
       },
-      description: `Sow Joan's Stalk Market is **OPEN** on <@${msg.author.id}>'s island!
-      Daisy Mae is selling turnips in batches of ten for **${args[1]}** bells each!`,
+      description: `Sow Joan\'s Stalk Market is **OPEN** on <@${msg.author.id}>'s island! ` +
+      `Daisy Mae is selling turnips in batches of ten for **${args[1]}** bells each!`,
       fields:
       [
         {
@@ -33,6 +33,11 @@ module.exports = (msg, args) => {
         {
           name: '**Duration:**',
           value: `**${args[3]} ${args[4]}**`,
+          inline: true
+        },
+        {
+          name: 'Entry Fee',
+          value: `**${args[5]}**`,
           inline: true
         },
         {

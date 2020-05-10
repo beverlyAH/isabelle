@@ -15,7 +15,6 @@ module.exports = (msg, args) => {
   } else {
     code = args[2].toUpperCase()
   }
-  
   msg.client.channels.get(SELLING_CHANNEL).send({
     embed: {
       color: 16697377,
@@ -23,8 +22,8 @@ module.exports = (msg, args) => {
       thumbnail: {
         "url": `${NOOKLING_ICON}`
       },
-      description: `Nook's Corner is **OPEN** on <@${msg.author.id}>'s island!
-      Timmy and Tommy are buying turnips for **${args[1]}** bells each!`,
+      description: `Nook's Corner is **OPEN** on <@${msg.author.id}>'s island! ` +
+      `Timmy and Tommy are buying turnips for **${args[1]}** bells each!`,
       fields:
       [
         {
