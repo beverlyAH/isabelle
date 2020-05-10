@@ -28,7 +28,7 @@ module.exports = {
   name: '/delete',
   description: 'delete messages',
   execute(msg, args) {
-    if(msg.member.roles.get(ADMIN_ROLE_ID)) {
+    if(msg.member.roles.get('' + ADMIN_ROLE_ID + '')) {
       deleteMessages(msg)
     } else {
       msg.channel.send('Sorry, that command is for admins only!')
