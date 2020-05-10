@@ -5,6 +5,7 @@ const SELLING_CHANNEL = process.env.SELLING_CHANNEL
 const NOOKLING_ICON = process.env.NOOKLING_ICON
 
 module.exports = (msg, args) => {
+  console.log(args)
   if(!validate(args)) {
     error(msg)
     return
