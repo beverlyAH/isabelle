@@ -21,7 +21,7 @@ module.exports = (msg, args) => {
       thumbnail: {
         "url": `${DAISY_ICON}`
       },
-      description: `Sow Joan's Stalk Market is **OPEN** on <@${msg.author.id}>'s island! :daisy:
+      description: `Sow Joan's Stalk Market is **OPEN** on <@${msg.author.id}>'s island!
       Daisy Mae is selling turnips in batches of ten for **${args[1]}** bells each!`,
       fields:
       [
@@ -37,7 +37,7 @@ module.exports = (msg, args) => {
         },
         {
           name: `**Want to visit?**`,
-          value: `Let <@${msg.author.id}> know by reacting to this post with :bells:!`
+          value: `Let <@${msg.author.id}> know by reacting to this post with  <:turnip:708896970952933437>!`
         }
       ],
       timestamp: new Date()

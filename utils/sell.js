@@ -23,7 +23,7 @@ module.exports = (msg, args) => {
       thumbnail: {
         "url": `${NOOKLING_ICON}`
       },
-      description: `Nook's Corner is **OPEN** on <@${msg.author.id}>'s island! :nooklings:
+      description: `Nook's Corner is **OPEN** on <@${msg.author.id}>'s island!
       Timmy and Tommy are buying turnips for **${args[1]}** bells each!`,
       fields:
       [
@@ -44,7 +44,7 @@ module.exports = (msg, args) => {
         },
         {
           name: `Want to visit?`,
-          value: `Let <@${msg.author.id}> know by reacting to this post with :bells:!`
+          value: `Let <@${msg.author.id}> know by reacting to this post with <:bells:708896970604937269>!`
         }
       ],
       timestamp: new Date()
