@@ -22,7 +22,7 @@ bot.on('message', msg => {
 
   try {
     bot.commands.get(command).execute(msg, args);
-    console.info(`Called command: ${command}`);
+    console.info(`Called command: ${command} [arguments: ${args}]`);
   } catch (error) {
     console.error(error)
     msg.reply(`I don't know what that means! Sorry!`);
