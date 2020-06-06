@@ -25,8 +25,6 @@ bot.on('messageReactionAdd', (reaction, user) => {
   let message = reaction.message, emoji = reaction.emoji;
   console.log('reacting')
   if (emoji.name == 'blank') {
-    // We don't have the member, but only the user...
-    // Thanks to the previous part, we know how to fetch it
     console.log('correct emoji')
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding normie role')
@@ -38,8 +36,6 @@ bot.on('messageReactionAdd', (reaction, user) => {
     });
   }
   if (emoji.name == 'tardis') {
-    // We don't have the member, but only the user...
-    // Thanks to the previous part, we know how to fetch it
     console.log('correct emoji')
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding timelord role')
