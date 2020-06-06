@@ -1,8 +1,8 @@
-const { buy, sell, help } = require('../utils')
+const { buy, sell, turnipHelp } = require('../utils')
 
 module.exports = {
   name: '/turnip',
-  description: 'isabelle turnip command handler (...commandler)',
+  description: 'isabelle\'s turnip command handler (...commandler)',
   execute(msg, args) {
     switch(args[0].toLowerCase()) {
       case 'sell':
@@ -21,15 +21,14 @@ module.exports = {
         break;
       case 'help':
         msg.channel.startTyping(msg.channel)
-        help(msg, args);
+        turnipHelp(msg, args);
         msg.channel.stopTyping(msg.channel)
         break;
       default:
-        msg.channel.startTyping(msg.channel)
-        msg.channel.send('Sorry, I don\'t know what you mean!').catch(err => {
-          console.error(err)
-        })
-        msg.channel.stopTyping(msg.channel)
+        msg.channel.send('Sorry, I don\'t know what you mean!')
+          .catch(err => {
+            console.error(err)
+          })
         break;
     }
     return

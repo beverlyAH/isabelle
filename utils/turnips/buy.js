@@ -1,11 +1,11 @@
-const validate = require('./validate.js')
-const greeting = require('./greeting.js')
+const validate = require('./validateTurnipListing.js')
+const greeting = require('../greeting.js')
 const BUYING_CHANNEL = process.env.BUYING_CHANNEL
-const DAISY_ICON = process.env.DAISY_ICON
+const ICON_DAISY = process.env.ICON_DAISY
 
 module.exports = (msg, args) => {
   if(!validate(args)) {
-    error(msg)
+    error(msg, 'turnip')
     return
   }
   let code;
@@ -19,7 +19,7 @@ module.exports = (msg, args) => {
       color: 16697377,
       title: greeting(),
       thumbnail: {
-        "url": `${DAISY_ICON}`
+        "url": `${ICON_DAISY}`
       },
       description: `Sow Joan\'s Stalk Market is **OPEN** on <@${msg.author.id}>'s island! ` +
       `Daisy Mae is selling turnips in batches of ten for **${args[1]}** bells each!`,

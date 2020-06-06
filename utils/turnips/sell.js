@@ -1,13 +1,13 @@
-const validate = require('./validate.js')
-const error = require('./error.js')
-const greeting = require('./greeting.js')
+const validate = require('./validateTurnipListing.js')
+const error = require('../error.js')
+const greeting = require('../greeting.js')
 const SELLING_CHANNEL = process.env.SELLING_CHANNEL
-const NOOKLING_ICON = process.env.NOOKLING_ICON
+const ICON_NOOKLING = process.env.ICON_NOOKLING
 
 module.exports = (msg, args) => {
   console.log(args)
   if(!validate(args)) {
-    error(msg)
+    error(msg, 'turnip')
     return
   }
   let code;
@@ -21,7 +21,7 @@ module.exports = (msg, args) => {
       color: 16697377,
       title: greeting(),
       thumbnail: {
-        "url": `${NOOKLING_ICON}`
+        "url": `${ICON_NOOKLING}`
       },
       description: `Nook's Corner is **OPEN** on <@${msg.author.id}>'s island! ` +
       `Timmy and Tommy are buying turnips for **${args[1]}** bells each!`,

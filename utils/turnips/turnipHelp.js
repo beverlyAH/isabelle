@@ -1,4 +1,4 @@
-const ISABELLE_ICON = process.env.ISABELLE_ICON
+const ICON_ISABELLE = process.env.ICON_ISABELLE
 
 module.exports = (msg, args) => {
   msg.channel.send({
@@ -6,7 +6,7 @@ module.exports = (msg, args) => {
     color: 16697377,
     title: 'Need help making a turnip listing?',
     thumbnail: {
-      "url": `${ISABELLE_ICON}`
+      "url": `${ICON_ISABELLE}`
     },
     description: 'Here\'s what you need to know:',
     fields: [
