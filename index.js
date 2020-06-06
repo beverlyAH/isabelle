@@ -9,6 +9,7 @@ const GUILD_ID = process.env.GUILD_ID;
 const ROLE_REACT_MESSAGE_ID = process.env.ROLE_REACT_MESSAGE_ID;
 const NORMIE_ID = process.env.NORMIE_ID;
 const TIMELORD_ID = process.env.TIMELORD_ID;
+const VERIFIED_ID = process.env.VERIFIED_ID;
 
 Object.keys(botCommands).map(key => {
   bot.commands.set(botCommands[key].name, botCommands[key]);
@@ -30,6 +31,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding normie role')
       member.addRole(NORMIE_ID);
+      member.addRole(VERIFIED_ID);
     });
   }
   if (emoji.name == 'tardis') {
@@ -39,6 +41,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding timelord role')
       member.addRole(TIMELORD_ID);
+      member.addRole(VERIFIED_ID);
     });
 }
 });
