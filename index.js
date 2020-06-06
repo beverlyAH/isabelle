@@ -31,6 +31,9 @@ bot.on('messageReactionAdd', (reaction, user) => {
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding normie role')
       member.addRole(NORMIE_ID);
+    });
+    message.guild.fetchMember(user.id).then(member => {
+      console.log('adding verified role')
       member.addRole(VERIFIED_ID);
     });
   }
@@ -41,6 +44,9 @@ bot.on('messageReactionAdd', (reaction, user) => {
     message.guild.fetchMember(user.id).then(member => {
       console.log('adding timelord role')
       member.addRole(TIMELORD_ID);
+    });
+    message.guild.fetchMember(user.id).then(member => {
+      console.log('adding verified role')
       member.addRole(VERIFIED_ID);
     });
 }
